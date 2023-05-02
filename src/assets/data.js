@@ -12,7 +12,7 @@ export const NEWSCATEGORIES = [
   { name: "Technology", value: "technology", id: nanoid(10) },
   { name: "Science", value: "science", id: nanoid(10) },
   { name: "Finance", value: "finance", id: nanoid(10) },
-  { name: "Nature", value: "nature", id: nanoid(10) },
+  { name: "Media", value: "media", id: nanoid(10) },
   { name: "Education", value: "education", id: nanoid(10) },
   { name: "Health", value: "health", id: nanoid(10) },
   { name: "Culture", value: "culture", id: nanoid(10) },

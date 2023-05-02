@@ -1,10 +1,10 @@
-import { RotatingTriangles } from "react-loader-spinner";
+import { ColorRing } from "react-loader-spinner";
 
 
-const Loador = () => {
+const Loader = () => {
   return (
     <div className="flex items-center justify-center h-screen">
-    <RotatingTriangles
+    <ColorRing
       height="80"
       width="80"
       color="#3B82F6"
@@ -17,4 +17,4 @@ const Loador = () => {
   )
 }
 
-export default Loador
+export default Loader

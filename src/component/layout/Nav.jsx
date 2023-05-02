@@ -18,7 +18,7 @@ const Nav = () => {
   return (
     <div className="m-auto max-w-[1440px]">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2 p-4">
+        <div className="flex items-center gap-2 p-4 cursor-pointer">
           <RiNewspaperLine color="#F6AC7A" size="50"></RiNewspaperLine>
           <h1 className="text-3xl font-bold text-[#F6AC7A]">News</h1>
         </div>
@@ -37,7 +37,7 @@ const Nav = () => {
                   value={filter}
                   type="text"
                   placeholder="Search for an article"
-                  className="py-3 bg-transparent focus:outline-none"
+                  className="py-3 pr-8 bg-transparent focus:outline-none"
                 />
                 <AiOutlineSearch size='50' className="text-gray-200 " />
               </div>
@@ -50,10 +50,6 @@ const Nav = () => {
           </div>
         </div>
       </div>
-      
-      <div className="absolute inset-0 -z-30">
-            <NewsPublisher />
-          </div>
     </div>
   );
 };

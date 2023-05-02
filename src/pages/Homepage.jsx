@@ -3,13 +3,13 @@ import { useGetAllNewsQuery } from "../features/NewsApiSlice";
 import { setPublisher } from "../features/NewsSlice";
 import Wrapper from "../component/ui/Wrapper";
 import Nav from "../component/layout/Nav";
-import Loador from "../component/ui/Loador";
+import Loader from "../component/ui/Loader";
 import NewsCard from "../component/ui/NewsCard";
 import { Link } from "react-router-dom";
 import { NEWSCATEGORIES} from "../assets/data";
 import { changeCategory } from "../features/NewsSlice";
 import Footer from "../component/layout/Footer";
-import TredingNews from "../component/ui/TredingNews";
+import NewsPublisher from "../component/ui/NewsPublisher";
 
 const Homepage = () => {
   const { category, publisher, filter } = useSelector((state) => state.news);
@@ -25,11 +25,11 @@ const Homepage = () => {
   return (
     <div className="bg-[#F7F7F7]">
       <Nav />
-      <Wrapper styles="relative max-w-[1440px]">
+      <Wrapper styles="relative">
         <div className="flex flex-col justify-end py-16 mt-20 lg:flex-row">
           <div className="gap-3 mr-auto max-w-7xl">
             {isLoading || isFetching ? (
-              <Loador />
+              <Loader />
             ) : (
               <div className="grid overflow-y-scroll lg:grid-cols-3 md:grid-cols-4 gap-y-8 scrollbar-hide">
                 {viewData
@@ -67,7 +67,7 @@ const Homepage = () => {
                 </div>
               ))}
             </div>
-            <TredingNews />
+            <NewsPublisher/>
           </div>
           
         </div>

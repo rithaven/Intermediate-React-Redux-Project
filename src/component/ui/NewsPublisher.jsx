@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setPublisher } from "../../features/NewsSlice";
 import { useGetAllPublishersQuery } from "../../features/NewsApiSlice";
-import Loador from "../ui/Loador";
+import Loader from "../ui/Loader";
 
 const NewsPublisher = () => {
     const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const NewsPublisher = () => {
       );
 
   return (
-       <div className="border-primary py-6 border-t border-black bg-[#2E2F41] ">
+       <div className="py-6 border-t border-black border-primary">
       {!isLoading ? (
         <ul className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 justify-between py-6 border-primary max-w-[1440px] mx-auto h-screen scrollbar-thin scrollbar-thumb-blue-500 overflow-y-scroll px-4 pb-20 my-12">
           {publishers?.map((publisher, index) => (
@@ -32,7 +32,7 @@ const NewsPublisher = () => {
           ))}
         </ul>
       ) : (
-        <Loador />
+        <Loader />
       )}
     </div>
   )
