@@ -50,7 +50,8 @@ const Homepage = () => {
             )}
           </div>
           <div className="w-full">
-            <div className="grid grid-cols-4 gap-4 px-8 my-4 md:grid-cols-4 lg:grid-cols-4">
+            <h2 className="font-bold">CATEGORIES</h2>
+            <div className="grid grid-cols-4 gap-4 px-8 my-4 border-t border-black border-primary md:grid-cols-4 lg:grid-cols-4">
               {NEWSCATEGORIES.map((categoryObject) => (
                 <div
                   className={`text-base font-medium    rounded-3xl p-2 
@@ -68,6 +69,7 @@ const Homepage = () => {
                 </div>
               ))}
             </div>
+            <h2 className="font-bold">PUBLISHERS</h2>
             <NewsPublisher />
           </div>
         </div>

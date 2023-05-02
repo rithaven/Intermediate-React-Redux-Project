@@ -26,7 +26,7 @@ const TredingNews = ({ image, title, publisher, author }) => {
         )}
         <Link to={`/detail/${encodeURIComponent(title)}`}>
           <h1
-             dangerouslySetInnerHTML={{ __html: title}}
+             dangerouslySetInnerHTML={{ __html: title(0, 9)}}
             className="text-xl font-medium hover:text-[#F6AC7A]">
           </h1>
         </Link>
