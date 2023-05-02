@@ -11,6 +11,7 @@ import { changeCategory } from "../features/NewsSlice";
 import Footer from "../component/layout/Footer";
 import NewsPublisher from "../component/ui/NewsPublisher";
 
+
 const Homepage = () => {
   const { category, publisher, filter } = useSelector((state) => state.news);
   const dispatch = useDispatch();
@@ -67,9 +68,8 @@ const Homepage = () => {
                 </div>
               ))}
             </div>
-            <NewsPublisher/>
+            <NewsPublisher />
           </div>
-          
         </div>
       </Wrapper>
       <Footer />
