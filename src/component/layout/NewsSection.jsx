@@ -31,13 +31,12 @@ const NewsSection = () => {
                 )
                 .map((item, index) => (
                   <TredingNews
-                    key={index}
-                    url={item.url}
-                    image={item.urlToImage}
-                    title={item.title}
-                    publisher={item.source.name}
-                    author={item.author}
-                  />
+                  key={index}
+                  url={item.url}
+                  image={item.urlToImage}
+                  title={item.title}
+                  publisher={item.source.name}
+                />
                 ))
             )}
           </div>

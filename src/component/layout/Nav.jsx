@@ -7,8 +7,8 @@ import { RiNewspaperLine } from "react-icons/ri";
 
 const Nav = () => {
   const dispatch = useDispatch();
-  const { filter } = useSelector((state) => state.news);
-  const { showPublishers } = useSelector((state) => state.news);
+  const { filter ,showPublishers} = useSelector((state) => state.news);
+
   
 
   useEffect(() => {

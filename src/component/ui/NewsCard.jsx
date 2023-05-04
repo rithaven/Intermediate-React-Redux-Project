@@ -8,17 +8,15 @@ const NewsCard = ({ image, title, publisher }) => {
         <img
           className="object-cover w-full h-64 mx-auto"
           src={
-            image ||
-            "https://images.pexels.com/photos/158651/news-newsletter-newspaper-information-158651.jpeg?auto=compress&cs=tinysrgb&w=600"
+            image 
           }
           alt=""
         />
       </Link>
       <Link to={`/detail/${encodeURIComponent(title)}`}>
         <h1
-          dangerouslySetInnerHTML={{ __html: title.slice(0, 100) }}
           className="text-2xl font-medium hover:text-[#F6AC7A]"
-        ></h1>
+        >{title.slice(0, 100)}</h1>
       </Link>
       <Link
         to={`/${encodeURIComponent(publisher)}`}

@@ -4,13 +4,13 @@ import News from "./pages/AboutNews";
 
 function App() {
   return (
-    <div>
+    
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/detail/:title" element={<News />} />
         <Route path="/:source" element={<Homepage />} />
       </Routes>
-    </div>
+   
   );
 }
 

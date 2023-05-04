@@ -16,7 +16,7 @@ const NewsPublisher = () => {
   return (
        <div className="py-6 border-t border-black border-primary">
       {!isLoading ? (
-        <ul className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 justify-between py-6 border-primary max-w-[1440px] mx-auto h-screen scrollbar-thin scrollbar-thumb-blue-500 overflow-y-scroll px-4 pb-20 my-12">
+        <ul className="grid lg:grid-cols-2 md:grid-cols-2 gap-6 justify-between py-2 border-primary max-w-[1440px] mx-auto h-screen scrollbar-thin scrollbar-thumb-blue-500 overflow-y-scroll px-4 pb-20 my-12">
           {publishers?.map((publisher, index) => (
             <li key={index} className="text-lg font-medium ">
               <Link
@@ -24,9 +24,9 @@ const NewsPublisher = () => {
                 onClick={() => {
                   dispatch(setPublisher(publisher.id));
                 }}
-                className="hover:underline hover:text-blue-500"
+                className="hover:underline hover:text-[#F6AC7A] bg-black text-white p-2 rounded-full"
               >
-                {publisher.name}
+                {publisher.name.slice(0, 5)}
               </Link>
             </li>
           ))}

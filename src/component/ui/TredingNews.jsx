@@ -18,7 +18,7 @@ const TredingNews = ({ image, title, publisher, author }) => {
       <div className="flex flex-col col-span-2">
         {author && (
           <Link
-            to={`/${encodeURIComponent(publisher)}`}
+            to="{`/${encodeURIComponent(publisher)}`}"
             className="flex items-center gap-2"
           >
             <span className="text-xs hover:text-[#F6AC7A]">{author}</span>
