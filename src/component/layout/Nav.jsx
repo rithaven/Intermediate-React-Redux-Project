@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { filterNews } from "../../features/NewsSlice";
 import { AiOutlineSearch } from "react-icons/ai";
-import NewsPublisher from "../ui/NewsPublisher";
+// import NewsPublisher from "../ui/NewsPublisher";
 import { RiNewspaperLine } from "react-icons/ri";
+import NewsCard from "../ui/NewsCard";
+
 
 const Nav = () => {
   const dispatch = useDispatch();
@@ -27,7 +29,7 @@ const Nav = () => {
           <div className="max-w-[1440px] mx-auto">
             {showPublishers && (
               <div className="absolute inset-0 -z-30">
-                <NewsPublisher />
+                <NewsCard />
               </div>
             )}
             <div className="flex items-center justify-between gap-12">
