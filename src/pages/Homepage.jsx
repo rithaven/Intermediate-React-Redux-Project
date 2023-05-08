@@ -22,7 +22,7 @@ const Homepage = () => {
   } = useGetAllNewsQuery({ category, publisher });
   !isLoading && !response.totalResults && dispatch(setPublisher(""));
   const data = !isLoading ? response.articles : [];
-  const viewData = publisher ? data : data.slice(0, 9);
+  const viewData = data.slice(0, 9);
   return (
     <div className="bg-[#F7F7F7]">
       <Nav />
@@ -70,7 +70,7 @@ const Homepage = () => {
             )}
           </div>
           <div className=" w-[1000px]">
-            <h2 className="text-sm font-bold">News CATEGORIES</h2>
+            <h2 className="text-sm font-bold">NEWS CATEGORIES</h2>
             <div className="grid gap-4 px-2 my-4 border-t border-black border-primary md:grid-cols-4 lg:grid-cols-3">
               {NEWSCATEGORIES.map((categoryObject) => (
                 <div
