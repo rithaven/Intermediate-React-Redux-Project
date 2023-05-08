@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import Loader from "../component/ui/Loader";
 import {
   useGetAllNewsQuery,
-  useGetAllTrendingNewsQuery,
 } from "../features/NewsApiSlice";
 import Footer from "../component/layout/Footer";
 
@@ -16,16 +15,12 @@ const AboutNews = () => {
     category,
     publisher,
   });
-  const { data: trendingResponse, isLoading: trendingIsLoading } =
-    useGetAllTrendingNewsQuery(category);
+
+    
   const articles = response?.articles;
-  const data = Array.isArray(articles) && [
-    ...articles,
-    ...trendingResponse?.articles,
-  ];
+  const data = Array.isArray(articles)&& articles
   const article =
     !isLoading &&
-    !trendingIsLoading &&
     data.find((item) => item.title === title);
 
   return (
