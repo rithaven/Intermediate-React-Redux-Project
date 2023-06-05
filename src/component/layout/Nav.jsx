@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { filterNews } from "../../features/NewsSlice";
 import { AiOutlineSearch } from "react-icons/ai";
-// import NewsPublisher from "../ui/NewsPublisher";
-import { RiNewspaperLine } from "react-icons/ri";
 import NewsCard from "../ui/NewsCard";
 
 
@@ -11,17 +9,16 @@ const Nav = () => {
   const dispatch = useDispatch();
   const { filter ,showPublishers} = useSelector((state) => state.news);
 
-  
-
   useEffect(() => {
     document.body.style.overflow = showPublishers ? "hidden" : "auto";
     return () => (document.body.style.overflow = "scroll");
   }, [showPublishers]);
+  
   return (
     <div className="m-auto max-w-[1440px]">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2 p-4 cursor-pointer">
-          <RiNewspaperLine color="#F6AC7A" size="50"></RiNewspaperLine>
+          
           <h1 className="text-3xl font-bold text-[#F6AC7A]">News</h1>
         </div>
         
@@ -55,5 +52,4 @@ const Nav = () => {
     </div>
   );
 };
-
 export default Nav;

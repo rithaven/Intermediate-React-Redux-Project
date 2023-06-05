@@ -67,12 +67,15 @@ const AboutNews = () => {
                             type="checkbox"
                             class="peer opacity-0 w-0 h-0"
                           />
+                        <p className="pt-5 font-bold "> <span className="text-3xl text-[#F6AC7A]">Read more</span> <span className="mt-4 text-4xl">  &rarr; </span> </p> 
                           <span
-                            class="absolute p-4 pr-5 text-white cursor-pointer top-0   bg-white rounded-lg duration-300 before:content-['']
-                             before:absolute before:w-10 before:h-4 before:shadow-lg before:shadow-blue-900 before:top-1 before:left-1 before:rounded-b-xl
-                           before:bg-[#F6AC7A] before:duration-300 peer-checked:before:translate-x-[690px]
+                            class="absolute p-4 pr-5 text-white cursor-pointer top-0 mt-4   rounded-lg duration-300 before:content-['']
+                             before:absolute before:w-10 before:h-4  before:shadow-blue-900 before:top-1 before:left-1 before:rounded-b-xl
+                            before:duration-300 peer-checked:before:translate-x-[690px]
                            peer-checked:bg-[#F6AC7A]"
                           >
+                       <p className="w-24 mb-8 font-bold border border-white rounded-lg "> <span className="">  &larr; </span> Back</p> 
+
                             This page is supposed to display the full text of
                             the article, however, the news API we are using for
                             this exercise project does not deliver the full text

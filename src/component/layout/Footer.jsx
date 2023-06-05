@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { changeCategory } from "../../features/NewsSlice";
 import { NEWSCATEGORIES, LINKS } from "../../assets/data";
-import { RiNewspaperLine } from "react-icons/ri";
 
 const Footer = () => {
   const dispatch = useDispatch();
@@ -10,7 +9,6 @@ const Footer = () => {
   return (
     <div className='bg-[#0a3738] text-white text-center'>
        <div className='flex items-center gap-2 p-10 text-2xl font-bold'>
-        <RiNewspaperLine size='50'color="#F6AC7A"/>
       <h1 className='text-3xl font-bold text-[#F6AC7A]'>News</h1> 
        </div>
        <div>
